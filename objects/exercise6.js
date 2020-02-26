@@ -1,0 +1,16 @@
+let myProtoObj = {
+  foo: 1,
+  bar: 2,
+};
+
+let myObj = Object.create(myProtoObj);  
+myObj.qux = 3; 
+
+for (let key in myObj) { 
+  console.log(key); // should return only keys of both parent and child objs
+}
+
+
+Object.keys(myObj).forEach(function(key) {
+  console.log('--' + key); // should return only keys of the child obj 
+});
