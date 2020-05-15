@@ -1,0 +1,1 @@
+console.log(['fish', 'and', 'chips'][10]); 
